@@ -2,6 +2,8 @@
 <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 <script src='https://raw.githack.com/AR-js-org/AR.js/ES6/aframe/build/aframe-ar-nft.js'></script>
 
+<script src="gesture-detector.js"></script>
+<script src="gesture-handler.js"></script>
 <!-- style for the loader -->
 <style>
     .arjs-loader {
@@ -31,8 +33,8 @@
     <!-- a-frame scene -->
     <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
         <a-assets>
-            <a-asset-item id="crate-obj" src="asset2/Grinding basin_cover.obj"></a-asset-item>
-            <a-asset-item id="crate-mtl" src="asset2/Grinding basin_cover.mtl"></a-asset-item>
+            <a-asset-item id="crate-obj" src="asset2/G.obj"></a-asset-item>
+            <a-asset-item id="crate-mtl" src="asset2/G.mtl"></a-asset-item>
         </a-assets>
         <!-- a-nft is the anchor that defines an Image Tracking entity -->
         <!-- on 'url' use the path to the Image Descriptors created before. -->
