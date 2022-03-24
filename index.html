@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script> -->
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script src="gesture-detector.js"></script>
+    <script src="gesture-handler.js"></script>
+    <script src='https://raw.githack.com/AR-js-org/AR.js/ES6/aframe/build/aframe-ar-nft.js'></script>
+</head>
+
+<body style="margin: 0; overflow: hidden; ">
+    <a-scene vr-mode-ui="enabled: false;" loading-screen="enabled: false;" renderer="logarithmicDepthBuffer: true;" arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" id="scene" embedded gesture-detector>
+        <a-assets>
+            <a-asset-item id="animated-asset" src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"></a-asset-item>
+            <img id="textBG" src="assets/Blue_BG.png">
+            <a-asset-item id="linkG" src="asset2/Grinding basin_cover.obj"></a-asset-item>
+            <a-asset-item id="crate-obj" src="asset2/Grinding basin_cover.obj"></a-asset-item>
+            <a-asset-item id="crate-mtl" src="asset2/Grinding basin_cover.mtl"></a-asset-item>
+        </a-assets>
+        <!-- type="pattern" preset="custom" url="assets/marker.patt" -->
+        <!-- <a-marker id="animated-marker" preset="hiro" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerA">
+            <a-entity id="bowser-model" position="-0.07 -1.2 0.3" rotation="0 180 0" scale="0.1892335793756071 0.1892335793756071 0.1892335793756071" animation-mixer="loop: repeat" gltf-model="#animated-asset" class="clickable" gesture-handler></a-entity>
+            <a-entity text=" value: item ;align: center;" scale="5 5 5" position="0 0 -1" rotation="-90 0 0"></a-entity>
+            <a-image src="#textBG" scale="1 0.5 0" position="0 0 -1" rotation="90 0 0"></a-image>
+        </a-marker> -->
+
+        <!-- <a-marker type="pattern" preset="custom" url="assets/pattern-IICTBpng.patt" 
+            raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerA" >
+            <a-entity id="bowser-model" position="-0.07 -1.2 0.3" rotation="0 180 0" scale="0.1892335793756071 0.1892335793756071 0.1892335793756071" animation-mixer="loop: repeat" gltf-model="#animated-asset" class="clickable" gesture-handler></a-entity>
+			<a-entity text=" value: item2 ;align: center;" scale="5 5 5" position="0 0 -1" rotation="-90 0 0" ></a-entity>
+			<a-image src="#textBG" scale="1 0.5 0" position="0 0 -1" rotation="90 0 0"></a-image>
+		</a-marker>-->
+
+        <!-- <a-marker type="pattern" preset="custom" url="assets/pattern-IICTBpng.patt" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerA">
+            <a-entity id="bowser-model" position="-0.07 -1.2 0.3" rotation="0 -90 90" scale="0.8 0.8 0.8" animation-mixer="loop: repeat" gltf-model="#anim" class="clickable" gesture-handler></a-entity>
+            <a-entity text=" value: item2 ;align: center;" scale="5 5 5" position="0 0 -1" rotation="-90 0 0"></a-entity>
+            <a-image src="#textBG" scale="1 0.5 0" position="0 0 -1" rotation="90 0 0"></a-image>
+        </a-marker> -->
+
+        <a-nft type="nft" url="asset2/targer/T.fset" smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
+            <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
+            <a-obj-model src="#crate-obj" mtl="#crate-mtl"></a-obj-model>
+            </a-entity>
+        </a-nft>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+
+</html>
