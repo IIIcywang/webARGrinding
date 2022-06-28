@@ -1,0 +1,16 @@
+{
+"companyName": "IIIEDU",
+"productName": "ARWT",
+"productVersion": "0.1",
+"dataUrl": "webgl1.data.unityweb",
+"wasmCodeUrl": "webgl1.wasm",
+"wasmFrameworkUrl": "webgl1.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.1f1"
+}
